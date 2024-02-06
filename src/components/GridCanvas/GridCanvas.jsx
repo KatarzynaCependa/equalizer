@@ -1,5 +1,5 @@
 const GridCanvas = () => {
-  const gridData = Array.from({ length: 5 }, () => Array(16).fill(null));
+  const gridData = Array.from({ length: 5 }, () => Array(13).fill(null));
 
   return (
     <table style={{ borderCollapse: "collapse" }}>

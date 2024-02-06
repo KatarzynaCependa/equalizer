@@ -22,16 +22,21 @@ const Uploader = () => {
 
   return (
     <div className="wrapper">
-      <input
-        type="file"
-        accept=".mp3"
-        onChange={handleFileChange}
-        className="button"
-      />
-      <button onClick={handleUpload}>Upload MP3</button>
+      <label className="fileInput">
+        <input
+          type="file"
+          accept=".mp3"
+          onChange={handleFileChange}
+          className="inputFile"
+        />
+        <span className="uploadButton">Choose MP3 File</span>
+      </label>
+      <button className="uploadButton" onClick={handleUpload}>
+        Upload MP3
+      </button>
       {uploadedFile && (
-        <div>
-          <p>Success! Your file was loaded!</p>
+        <div className="successContainer">
+          <p className="successText">Success! Your file was loaded!</p>
           <ReactAudioPlayer src={URL.createObjectURL(uploadedFile)} controls />
         </div>
       )}
