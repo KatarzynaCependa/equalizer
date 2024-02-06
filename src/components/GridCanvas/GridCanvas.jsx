@@ -6,9 +6,9 @@ const GridCanvas = () => {
       <tbody>
         {gridData.map((row, rowIndex) => (
           <tr key={rowIndex}>
-            {row.map((columnIndex) => (
+            {row.map((column, columnIndex) => (
               <td
-                key={columnIndex}
+                key={`${rowIndex}-${columnIndex}`}
                 style={{
                   width: "60px",
                   height: "60px",
